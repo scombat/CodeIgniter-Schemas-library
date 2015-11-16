@@ -354,7 +354,7 @@ class Schemas {
 		$this->sitename = $site_name;
 	}
 
-	public function read_sitename()
+	public function read_sitename($encoded = null)
 	{
 		if ( $encoded === null )
 		{
