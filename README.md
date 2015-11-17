@@ -9,7 +9,7 @@
 
 #####And in the near future :
 * Promotion events for :
-  * Performers [In the pipes !] 
+  * Performers **[In the pipes !]**
   * Venues
   * Ticketers
 * Rich Snippets for :
