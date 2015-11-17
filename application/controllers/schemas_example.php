@@ -118,8 +118,12 @@ class Schemas_example extends CI_Controller {
 		// A contact with full options
 		$this->schemas->add_contact('0123456789', 'emergency', array("US","CA","FR"), 'TollFree', array("French", "English", "Spanish"));
 
+		// Remove a contact
+		$this->schemas->remove_contact(1);
+
 		// See the result :
 		// echo $this->schemas->read_schema();
+
 		
 		/**
 		 * End of Contact part
@@ -170,7 +174,6 @@ class Schemas_example extends CI_Controller {
 
 		// // Get the last version of breadcrumb
 		$newBreadcrumb = $this->schemas->read_breadcrumb();
-
 
 		// See the result :
 		// echo $oldBreadcrumb;

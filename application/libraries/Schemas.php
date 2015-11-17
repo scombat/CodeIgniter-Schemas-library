@@ -214,6 +214,23 @@ class Schemas {
 	}
 
 	/**
+	 * Remove a contact by index
+	 * @param  int $index the contact position
+	 * @return boolean        True if contact was erased else false
+	 */
+	public function remove_contact($index)
+	{
+		if ( array_key_exists($index, $this->schema->contactPoint) )
+		{
+			unset($this->schema->contactPoint[$index]);
+			$this->schema->contactPoint = array_values(array_filter($this->schema->contactPoint));
+			return ( TRUE );
+		}
+
+		return ( FALSE );
+	}
+
+	/**
 	 * Add a social link.
 	 * @param mixed $profile_url If a valid url is provided return the index of added profile else return false
 	 */
