@@ -77,6 +77,12 @@ $this->schemas->add_contact('0123456789', 'billing support', false, 'HearingImpa
 $this->schemas->add_contact('0123456789', 'emergency', array("US","CA","FR"), 'TollFree', array("French", "English", "Spanish"));
 ```
 
+######And if we removing a contact now ?
+```php
+$this->schemas->remove_contact(1);
+```
+That's all ! You can call this method with all indexes of existing contact.
+
 ######At the end, you'll want to get the schema, breadcrumb, sitename etc...
 For manipulate schema's object or json string before make all what you want with it.
 
