@@ -9,11 +9,11 @@
 
 #####And in the near future :
 * Promotion events for :
-  * Performers **[In the pipes !]**
+  * Performers _aborted for rich snippets features (suggested more important by few users)_
   * Venues
   * Ticketers
 * Rich Snippets for :
-  *  Products
+  *  Products **[In the pipes !]**
   *  Recipes
   *  Reviews
   *  Events
