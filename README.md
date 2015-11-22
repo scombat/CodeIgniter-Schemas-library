@@ -6,6 +6,8 @@
 * Corporate Contacts informations.
 * Social profiles informations.
 * Google breadcrumbs and site name.
+* Rich Snippets for :
+ * Products **[latest]**
 
 #####And in the near future :
 * Promotion events for :
@@ -13,7 +15,6 @@
   * Venues
   * Ticketers
 * Rich Snippets for :
-  *  Products **[In the pipes !]**
   *  Recipes
   *  Reviews
   *  Events
@@ -83,6 +84,24 @@ $this->schemas->remove_contact(1);
 ```
 That's all ! You can call this method with all indexes of existing contact.
 
+
+######Add a product rich snippet
+```php
+$this->schemas->product_snippet_name("Executive Anvil");
+$this->schemas->product_snippet_image("http://www.example.com/anvil_executive.jpg");
+$this->schemas->product_snippet_description("Sleeker than ACME's Classic Anvil, the Executive Anvil is perfect for the business traveler looking for something to drop from a height.");
+$this->schemas->product_snippet_code("mpn", "925872");
+$this->schemas->product_snippet_brand("ACME");
+$this->schemas->product_snippet_aggregateRating(4.4, 89);
+$this->schemas->product_snippet_offers(119.99, "USD", "2020-11-05", "InStock");
+
+// Get the result
+$product = $this->schemas->read_product_snippet();
+```
+This methods do that :
+
+![alt text](http://img15.hostingpics.net/pics/151684rslavalamp.png "Rich snippet product")
+
 ######At the end, you'll want to get the schema, breadcrumb, sitename etc...
 For manipulate schema's object or json string before make all what you want with it.
 
@@ -101,5 +120,8 @@ $breadcrumb = $this->schemas->read_breadcrumb();
 $schem = $this->schemas->read_schema();
 
 // Read Sitename
-$this->schemas->read_sitename(false);
+$this->schemas->read_sitename();
+
+// Read Product rich snippet
+$this->schemas->read_product_snippet();
 ```
