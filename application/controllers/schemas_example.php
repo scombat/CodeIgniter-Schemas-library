@@ -183,5 +183,25 @@ class Schemas_example extends CI_Controller {
 		 * End of Breadcrumb part
 		 * --------------------------------------------------------------------
 		 */
+		
+		/**
+		 * Product Rich Snippet
+		 */
+		
+		$this->schemas->product_snippet_name("Executive Anvil");
+		$this->schemas->product_snippet_image("http://www.example.com/anvil_executive.jpg");
+		$this->schemas->product_snippet_description("Sleeker than ACME's Classic Anvil, the Executive Anvil is perfect for the business traveler looking for something to drop from a height.");
+		$this->schemas->product_snippet_code("mpn", "925872");
+		$this->schemas->product_snippet_brand("ACME");
+		$this->schemas->product_snippet_aggregateRating(4.4, 89);
+		$this->schemas->product_snippet_offers(119.99, "USD", "2020-11-05", "InStock");
+
+		// See the result :
+		// echo $this->schemas->read_product_snippet();
+
+		/**
+		 * End of Product Rich Snippet part
+		 * --------------------------------------------------------------------
+		 */
 	}
 }
